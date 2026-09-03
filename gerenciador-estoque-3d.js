@@ -54,7 +54,17 @@ function removerProduto(nome) {
         }
     }
 }   
-let  
+let sistemaAtivo = true;
+while (sistemaAtivo) 
+    console.log("Bem-vindo ao Gerenciador de Estoque da PrintTech 3D!");
+    console.log("Escolha uma opção:");
+    console.log("1 - Adicionar produto");
+    console.log("2 - Listar produtos");
+    console.log("3 - Buscar produto");
+    console.log("4 - Atualizar produto");
+    console.log("5 - Calcular total do estoque");
+    console.log("6 - Remover produto");
+    console.log("7 - Sair");
 
-
+    let opcao = entrada.questionInt("Digite o número da opção desejada: ");
 
