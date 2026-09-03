@@ -66,5 +66,4 @@ while (sistemaAtivo)
     console.log("6 - Remover produto");
     console.log("7 - Sair");
 
-    let opcao = entrada.questionInt("Digite o número da opção desejada: ");
-
+    
