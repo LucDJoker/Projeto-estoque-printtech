@@ -1,3 +1,5 @@
+const entrada = require('readline-sync');    
+
 let catalogoPrintTech = [
     { nome: "Base controle Caveira 3D", quantidade: 10, preco: 150.00 },
     { nome: "Suporte Parede Headset 3D", quantidade: 5, preco: 80.00 },
@@ -39,20 +41,20 @@ function atualizarProduto(nome, novaQuantidade, novoPreco) {
     }
 }                       
 function calcularTotalEstoque() {
-    let total = 0;
-    for (let i = 0; i < catalogoPrintTech.length; i++) {
-        total += catalogoPrintTech[i].quantidade * catalogoPrintTech[i].preco;
-    }
+    catalogoPrintTech.reduce((total, produto) => {
+        return total + (produto.quantidade * produto.preco);
+    }, 0);
     return total;
 }
 function removerProduto(nome) {
     for (let i = 0; i < catalogoPrintTech.length; i++) {
         if (catalogoPrintTech[i].nome === nome) {
-            
+            catalogoPrintTech.splice(i, 1);
+            break;   
         }
     }
 }   
-
+let  
 
 
 
