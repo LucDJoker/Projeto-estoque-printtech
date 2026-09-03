@@ -66,4 +66,7 @@ while (sistemaAtivo)
     console.log("6 - Remover produto");
     console.log("7 - Sair");
 
-    
+    let opcao = entrada.question("Digite o número da opção desejada: ");
+    switch (opcao) {
+        case "1":
+            let nomeProduto = entrada.question("Digite o nome do produto: ")
