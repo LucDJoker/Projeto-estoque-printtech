@@ -9,7 +9,50 @@ let catalogoPrintTech = [
 function adicionarProduto(nome, quantidade, preco) {
     catalogoPrintTech.push({ nome: nome, quantidade: quantidade, preco: preco });
 }
-for (let i = 0; i < catalogoPrintTech.length; i++) {
-    console.log(catalogoPrintTech[i].nome);
-    console.log(catalogoPrintTech[i].preco);
+function listarProdutos() {
+    for (let i = 0; i < catalogoPrintTech.length; i++) {
+        console.log("Nome: " + catalogoPrintTech[i].nome);
+        console.log("Quantidade: " + catalogoPrintTech[i].quantidade);
+        console.log("Preço: R$" + catalogoPrintTech[i].preco);
+        console.log("------------------------");
+    }
+} 
+function buscarProduto(nome) {
+    for (let i = 0; i < catalogoPrintTech.length; i++) {
+        if (catalogoPrintTech[i].nome === nome) {
+            console.log("Produto encontrado:");
+            console.log("Nome: " + catalogoPrintTech[i].nome);
+            console.log("Quantidade: " + catalogoPrintTech[i].quantidade);
+            console.log("Preço: R$" + catalogoPrintTech[i].preco);
+            return;
+        }
+    }
+    console.log("Produto não encontrado.");
+}  
+function atualizarProduto(nome, novaQuantidade, novoPreco) {
+    for (let i = 0; i < catalogoPrintTech.length; i++) {
+        if (catalogoPrintTech[i].nome === nome) {
+            catalogoPrintTech[i].quantidade = novaQuantidade;
+            catalogoPrintTech[i].preco = novoPreco;
+            break;
+        }
+    }
+}                       
+function calcularTotalEstoque() {
+    let total = 0;
+    for (let i = 0; i < catalogoPrintTech.length; i++) {
+        total += catalogoPrintTech[i].quantidade * catalogoPrintTech[i].preco;
+    }
+    return total;
 }
+function removerProduto(nome) {
+    for (let i = 0; i < catalogoPrintTech.length; i++) {
+        if (catalogoPrintTech[i].nome === nome) {
+            
+        }
+    }
+}   
+
+
+
+
