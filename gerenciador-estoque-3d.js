@@ -67,5 +67,4 @@ while (sistemaAtivo)
     console.log("7 - Sair");
 
     let opcao = entrada.question("Digite o número da opção desejada: ");
-    switch (opcao) {}
-    
+    switch (opcao) {}   
